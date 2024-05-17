@@ -5,6 +5,7 @@ const body = document.querySelector('body');
 const select = document.querySelector(".select")
 const input = document.querySelector(".input")
 const nav = document.querySelector('nav')
+const countryName = document.querySelector('#country-name')
 
 document.addEventListener('DOMContentLoaded', () => {
   fetch("https://restcountries.com/v3.1/all")
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return `
           <div class="country-div">
               <img class="country-img" src="${country.flags.svg}" alt="${country.name.common} flag" width="100%">
-              <h2 class="country-name">${country.name.common}</h2>
+              <h2 class="country-name" id="country-name">${country.name.common}</h2>
               <p class="others"><strong>Population:</strong> ${country.population.toLocaleString()}</p>
               <p class="others"><strong>Region:</strong> ${country.region}</p>
               <p class="others"><strong>Capital:</strong> ${country.capital ? country.capital[0] : 'N/A'}</p>
@@ -43,9 +44,18 @@ moods.addEventListener('click', () => {
     input.style.color = '#fff'  
     nav.classList.remove('border-b-2')
     nav.style.backgroundColor = '#2b3844'
+    
 
   } else {
     body.classList.remove('dark-mode');
     body.classList.add('light-mode');
+    select.setAttribute("style" , 'color:white')
+    select.style.backgroundColor = 'white' 
+    select.style.color = 'black'
+    input.style.backgroundColor = 'white' 
+    input.style.color = 'black'  
+    nav.classList.add('border-b-2')
+    nav.style.backgroundColor = 'white'
+    
   }
 });
