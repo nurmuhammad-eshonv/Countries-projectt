@@ -3,12 +3,38 @@
 body {
   font-family: "Nunito Sans", sans-serif;
   background-color: #fafafa;
+  transition: background-color 0.5s, color 0.5s;
+
 }
+
 .container {
   box-sizing: border-box;
   margin: 0 auto;
-  max-width: 1380px;
+  max-width: 1280px;
 }
+
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode {
+  background-color: #202c36;
+  color: white;
+}
+body.dark-mode .country-div {
+  background-color: #333; /* Dark card background */
+  color: white; /* Dark card text color */
+}
+
+
+.country-div {
+  background-color: inherit;
+  color: inherit;
+}
+
+/* Add any other necessary dark mode styles here */
+
 input {
   width: 480px;
   height: 56px;
@@ -16,17 +42,20 @@ input {
   font-weight: 400;
   padding-left: 74px;
 }
+
 .input-select-wr {
   margin-top: 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .search-icon {
   position: absolute;
   margin-top: 2px;
   margin-left: 32px;
 }
+
 .select {
   width: 200px;
   height: 56px;
@@ -35,5 +64,50 @@ input {
   border-radius: 10px;
   cursor: pointer;
   padding-right: 20px;
+}
 
+.countries {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 80px;
+  margin-top: 48px;
+  cursor: pointer;
+}
+
+.country-div {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.country-img {
+  height: 160px;
+  margin-bottom: 24px;
+}
+.country-name {
+  font-family: Nunito Sans;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 26px;
+  color: #111517;
+  text-align: left;
+  margin-left: 24px;
+  margin-bottom:  16px;
+}
+
+.others {
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px;
+  text-align: left;
+  margin-left: 24px;
+  margin-bottom: 6px;
 }
