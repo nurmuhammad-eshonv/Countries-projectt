@@ -56,6 +56,5 @@ moods.addEventListener('click', () => {
     input.style.color = 'black'  
     nav.classList.add('border-b-2')
     nav.style.backgroundColor = 'white'
-    
   }
 });
