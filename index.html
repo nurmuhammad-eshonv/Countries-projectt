@@ -3,58 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>countries</title>
+    <title>Countries</title>
     <link rel="stylesheet" href="./src/output.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header>
-      <nav
-        class="flex items-center justify-between pl-20 pr-20 pt-1 w-full h-20 border-b-2"
-      >
-        <a href="/"
-          ><img
-            class="cursor-pointer logo"
-            src="./images/Where in the world_.svg"
-            alt=""
-        /></a>
+      <nav class="flex items-center justify-between pl-20 pr-20 pt-1 w-full h-20 border-b-2">
+        <a href="/">
+          <img class="cursor-pointer logo" src="./images/Where in the world_.svg" alt="Logo" />
+        </a>
         <div class="mood-wr flex gap-2.5 items-center">
-          <img
-            class="cursor-pointer dark-mood"
-            src="./images/dark-mood.svg"
-            alt="dark-mood"
-          />
+          <img class="cursor-pointer dark-mood" src="./images/dark-mood.svg" alt="Dark Mode" />
           <p class="font-semibold">Dark Mode</p>
         </div>
       </nav>
       <div class="container">
         <div class="input-select-wr">
-          <img
-            class="search-icon"
-            src="./images/search-icon.svg"
-            alt="search-icon"
-          />
-          <input
-            class="border input"
-            type="text"
-            placeholder="Search for a country… "
-          />
+          <img class="search-icon" src="./images/search-icon.svg" alt="Search Icon" />
+          <input class="border input" type="text" placeholder="Search for a country…" />
           <select class="select">
             <option value="">Filter by Region</option>
-            <option value="">Africa</option>
-            <option value="">Asia</option>
-            <option value="">Europe</option>
-            <option value="">Oceania</option>
+            <option value="Africa">Africa</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+            <option value="Americas">Americas</option>
           </select>
         </div>
       </div>
     </header>
     <main>
-     <div class="countries" id="countries">
-
-     </div>
+      <div class="countries" id="countries"></div>
     </main>
-
     <script src="./app.js"></script>
   </body>
 </html>
