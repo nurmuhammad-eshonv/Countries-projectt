@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const getCountryHTML = (country) => {
     return `
-    <a class="about-page" href="about.html">
       <div class="country-div">
         <img class="country-img" src="${country.flags.svg}" alt="${
       country.name.common
@@ -38,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
           country.capital ? country.capital[0] : "N/A"
         }</p>
        </div>
-      </a>
     `;
   }
   
